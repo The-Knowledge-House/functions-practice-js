@@ -66,16 +66,14 @@ calculateDogAge(4, 28)
 // Bonus: accept floating point values for amount per day, and round the
 // result to a round number
 
-function calculateSupply(age, amountPerDay) {
+function calculateSupply(age, numPerDay) {
   let maxAge = 100;
-
-  let totalNeeded = (amountPerDay * 365) * (maxAge - age);
-
-  console.log(`You will need ${totalNeeded} to last you until the age of ${age}`)
+  let totalNeeded = (numPerDay * 365) * (maxAge - age);
+  let message = 'You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
+  console.log(message);
 }
 
-calculateSupply(70, 2);
-
+calculateSupply(28, 36);
 
 
 //Exercise #4
