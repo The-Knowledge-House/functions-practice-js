@@ -22,7 +22,15 @@ const students = [
   "Zipporah",
 ];
 
+function attendance() {
 
+  for (let i = 0; i < students.length; i++) {
+    console.log(students[i] + " is in web development cohort");
+  }
+
+}
+
+attendance();
 
 
 
@@ -37,14 +45,15 @@ const students = [
 //Add an additional argument to the function that takes the conversion
 //rate of human to dog years
 
+function calculateDogAge(dogAge, humanAge) {
+  dogAge = dogAge * 7; // dog years
+  console.log(`Your age is ${dogAge} in dog years!`)
 
+  humanAge = humanAge / 7; // human years
+  console.log(`Your age is ${humanAge} in human years`)
+}
 
-
-
-
-
-
-
+calculateDogAge(4, 28)
 
 
 
@@ -57,12 +66,15 @@ const students = [
 // Bonus: accept floating point values for amount per day, and round the
 // result to a round number
 
+function calculateSupply(age, amountPerDay) {
+  let maxAge = 100;
 
+  let totalNeeded = (amountPerDay * 365) * (maxAge - age);
 
+  console.log(`You will need ${totalNeeded} to last you until the age of ${age}`)
+}
 
-
-
-
+calculateSupply(70, 2);
 
 
 
@@ -79,11 +91,19 @@ const students = [
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
 
+function calcCircumference(radius) {
+  let circumference = Math.PI * 2 * radius;
+  console.log(`The circumference is ${circumference}`)
+}
 
+calcCircumference(10);
 
+function calcArea(radius) {
+  let area = Math.PI * radius * radius;
+  console.log("The area is " + area)
+}
 
-
-
+calcArea(5);
 
 
 
@@ -95,13 +115,29 @@ const students = [
 // - Now store a fahrenheit temperature int a variable
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
+function celsiusToFahrenheit(celsius) {
+  let celsiusToF = (celsius * 9) / 5 + 32;
+  console.log(`${celsius} C is ${celsiusToF}`)
+}
 
+celsiusToFahrenheit(50)
 
+function fahrenheitToCelsius(fahrenheit) {
+  let fahrenheitToC = ((fahrenheit - 32) * 5) / 9;
+  console.log(`${fahrenheit} F is ${fahrenheitToC}C`)
+}
 
-
+fahrenheitToCelsius(100);
 
 
 //Exercise #6
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function numGive(one, two, three) {
+  let firstInput = one * two;
+  return Math.pow(firstInput, three);
+}
+
+console.log(numGive(1, 2, 3))
