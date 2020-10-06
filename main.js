@@ -22,6 +22,9 @@ const students = [
   "Zipporah",
 ];
 
+const studentInClass = () => {
+  student.forEach((student) => {console.log(`${student} is in the Web Development Class.`)});
+};
 
 
 
@@ -38,14 +41,7 @@ const students = [
 //rate of human to dog years
 
 
-
-
-
-
-
-
-
-
+const calculateDogAge = (age) => console.log(`Your dog's age in human years is ${age*7}`)
 
 
 //Exercise #3
@@ -58,12 +54,10 @@ const students = [
 // result to a round number
 
 
-
-
-
-
-
-
+const calculateSupply = (age, amountPerDay) => 
+  `You will need SOMETHING to last you until the age of ${Math.round(
+    (80 - age) * 365 * amountPerDay
+  )}`;
 
 
 //Exercise #4
@@ -74,16 +68,13 @@ const students = [
 // - Pass the radius to the function
 // - Calculate the circumference based on the radius
 // - and output " The circumference is SOMETHING"
+
 // Second: Create a function called calcArea:
 // - Pass the radius to the function
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
-
-
-
-
-
-
+const calcCircumference = (radius) => Math.PI * 2 * radius;
+const calcArea = (radius) => Math.PI * (radius ** 2); //raising to the power of 2
 
 
 
@@ -95,9 +86,8 @@ const students = [
 // - Now store a fahrenheit temperature int a variable
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
-
-
-
+const celsiusToFahrenheit = (celcius) => `${celcius} degrees in celcius is ${celcius * (9 / 5) + 32} in fahrenheit`; //formula for calculating 
+const fahrenheitToCelsius = (fahrenheit) => `${fahrenheit} degrees in fahrenheit is ${((fahrenheit - 32) * 5) / 9} in celcius`;
 
 
 
@@ -105,3 +95,5 @@ const students = [
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+const powerRaise = (a, b, c) => (a*b) ** c;
