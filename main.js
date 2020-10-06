@@ -146,7 +146,7 @@ fahrenheitToCelsius(60);
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
-function three(a,b,c){
-  return (a*b)^c 
+function power(num1, num2, num3) {
+  return Math.pow((num1 * num2),(num3));
 }
-console.log(three(1,2,3));
+console.log(power(1, 2, 3));
