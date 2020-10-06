@@ -22,9 +22,12 @@ const students = [
   "Zipporah",
 ];
 
-
-
-
+function printStudents(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i] + " is in Progressive Web Dev");
+  }
+}
+printStudents(students);
 
 //Exercise #2
 //Write a function named calculateDogAge that:
@@ -37,16 +40,13 @@ const students = [
 //Add an additional argument to the function that takes the conversion
 //rate of human to dog years
 
-
-
-
-
-
-
-
-
-
-
+function calculateDogAge(age) {
+  let dogYears = 7 * age;
+  console.log("Your doggie is " + dogYears + " years old in dog years!");
+}
+calculateDogAge(1);
+calculateDogAge(0.5);
+calculateDogAge(12);
 
 //Exercise #3
 //Write a function named calculateSupply that:
@@ -57,14 +57,19 @@ const students = [
 // Bonus: accept floating point values for amount per day, and round the
 // result to a round number
 
-
-
-
-
-
-
-
-
+function calculateSupply(age, numPerDay) {
+  let maxAge = 100;
+  let totalNeeded = numPerDay * 365 * (maxAge - age);
+  let message =
+    "You will need " +
+    totalNeeded +
+    " cups of tea to last you until the ripe old age of " +
+    maxAge;
+  console.log(message);
+}
+calculateSupply(28, 36);
+calculateSupply(28, 2.5);
+calculateSupply(28, 400);
 
 //Exercise #4
 //http://math2.org/math/geometry/circles.htm
@@ -78,14 +83,12 @@ const students = [
 // - Pass the radius to the function
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
-
-
-
-
-
-
-
-
+function calcGeometry(radius) {
+  let circumference = Math.PI * 2 * radius;
+  console.log("The circumference is " + circumference);
+  let area = Math.PI * radius * radius;
+  console.log("The area is " + area);
+}
 
 //Exercise #5
 //Create a function called celsiusToFahrenheit:
@@ -95,13 +98,21 @@ const students = [
 // - Now store a fahrenheit temperature int a variable
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
-
-
-
-
-
+function celsiusToFahrenheit(celsius) {
+  let celsiusInF = (celsius * 9) / 5 + 32;
+  console.log(celsius + "°C is " + celsiusInF + "°F");
+}
+function fahrenheitToCelsius(fahrenheit) {
+  let fahrenheitInC = ((fahrenheit - 32) * 5) / 9;
+  console.log(fahrenheit + "°F is " + fahrenheitInC + "°C");
+}
 
 //Exercise #6
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function power(num1, num2, num3) {
+  return Math.pow(num1 * num2, num3);
+}
+console.log(power(1, 2, 3));
