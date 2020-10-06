@@ -22,6 +22,23 @@ const students = [
   "Zipporah",
 ];
 
+// function nameAndClass (){
+//   for(let i = 0; i < students.length; i++){
+//     console.log(`${students[i]} - Web Development Class`)
+//   }
+// }
+
+
+// nameAndClass();
+
+function printStudents(arr) {
+  for (let i = 0; i < arr.length; i++)
+  {
+    console.log(arr[i] + " is in Progressive Web Dev");
+    }
+}
+printStudents(students);
+
 
 
 
@@ -37,8 +54,20 @@ const students = [
 //Add an additional argument to the function that takes the conversion
 //rate of human to dog years
 
+// function calculateDogAge (age, conversion){
+//   let dogYears = age * conversion;
+//   console.log(`Your dog is ${dogYears} years old in dog years.`)
+// }
 
+// calculateDogAge(3, 7);
 
+function calculateDogAge(age) {
+  let dogYears = 7*age;
+  console.log("Your doggie is " + dogYears + " years old in dog years!");
+}
+calculateDogAge(1);
+calculateDogAge(0.5);
+calculateDogAge(12);
 
 
 
@@ -59,6 +88,23 @@ const students = [
 
 
 
+// function calculateSupply(age, amountPerDay) {
+//   let maxAge = 98;
+//   let totalNeeded = (amountPerDay * 365) * (maxAge - age);
+//   let message = 'You will need ' + totalNeeded + ' toilet papers to last you until you are ' + maxAge;
+//   console.log(message);
+// }
+
+
+function calculateSupply(age, numPerDay) {
+  let maxAge = 100;
+  let totalNeeded = (numPerDay * 365) * (maxAge - age);
+  let message = 'You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
+  console.log(message);
+}
+calculateSupply(28, 36);
+calculateSupply(28, 2.5);
+calculateSupply(28, 400);
 
 
 
@@ -80,6 +126,21 @@ const students = [
 
 
 
+// function calcGeometry(radius) {
+//   let circumference = Math.PI * 2 * radius;
+//   console.log("The circumference is " + circumference);
+// }
+// function calcArea(radius) {
+//   let area = Math.PI * radius * radius;
+//   console.log("The area is " + area);
+// }
+
+function calcGeometry(radius) {
+  let circumference = Math.PI * 2*radius;
+  console.log("The circumference is " + circumference);
+  let area = Math.PI * radius*radius;
+  console.log("The area is " + area);
+}
 
 
 
@@ -95,8 +156,30 @@ const students = [
 // - Now store a fahrenheit temperature int a variable
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
+// function celsiusToFahrenheit (){
+//   let celsius = 30;
+//   let fahr = (celsius * 9/5) + 32;
+//   console.log(`${celsius} degrees Celsius is ${fahr} degrees Fahrenheit`)
+// }
 
+// celsiusToFahrenheit();
 
+// function fahrenheitToCelsius (){
+//   let fahr = 30;
+//   let celsius = (fahr - 32) * 5/9;
+//   console.log(`${fahr} degrees Fahrenheit is ${celsius} degrees Celsius `)
+// }
+
+// fahrenheitToCelsius();
+
+function celsiusToFahrenheit(celsius) {
+  let celsiusInF = (celsius*9)/5 + 32;
+  console.log(celsius + '°C is ' + celsiusInF + '°F');
+}
+function fahrenheitToCelsius(fahrenheit) {
+  let fahrenheitInC = ((fahrenheit - 32)*5)/9;
+  console.log(fahrenheit + '°F is ' + fahrenheitInC + '°C');
+}
 
 
 
@@ -105,3 +188,11 @@ const students = [
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function funMath (par1, par2, par3){
+  let prod = (par1 * par2);
+  let answer = Math.pow(prod, par3);
+  console.log(answer);
+}
+
+funMath(1, 2, 3);
