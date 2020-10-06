@@ -29,7 +29,7 @@ function printStudents(arr) {
 printStudents(students);
 
 //Exercise #2
-//Write a function named calculateDogAge that:
+//Write a function named calculateDogAge that:1
 //takes one argument: your puppy's age
 //calculates your dog's age based on the conversion rate of
 // 1 human year to 7 dog years
