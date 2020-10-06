@@ -23,8 +23,17 @@ const students = [
 ];
 
 
+function students() {
+	let course = webDev;
+	
+	for (i = 0; i > students.length; i++) {
 
+	console.log(studnts[i] + "," + course);
 
+	studentsCourses();
+
+	}
+  }
 
 //Exercise #2
 //Write a function named calculateDogAge that:
@@ -37,14 +46,17 @@ const students = [
 //Add an additional argument to the function that takes the conversion
 //rate of human to dog years
 
+let humanAge = ('');
+function calDogAge(n) {
+  
+  let newDogAge = (n * 7);
+  let newHumanAge =(newDogAge / 7);
+}
+console.log(`Your dog is ${newDogAge}  in dog years`);
 
+console.log(`Your dog in human years is ${newHumanAge}`);
 
-
-
-
-
-
-
+calDogAge();
 
 
 
@@ -57,13 +69,16 @@ const students = [
 // Bonus: accept floating point values for amount per day, and round the
 // result to a round number
 
+function calculateSupply(age, amountPerDay) {
+let benchmarkAge = 79.5;
+let amountPerDay = (amountPerDay * 365) * (benchmarkAge - age);
+let message = 'You will need' + ${amountPerDay} + 'bowls of oatmeal until the ripe old age' + ${benchmarkAge};
 
+console.log(message);
 
+	}
 
-
-
-
-
+calculateSupply();
 
 
 //Exercise #4
@@ -78,13 +93,16 @@ const students = [
 // - Pass the radius to the function
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
-
-
-
-
-
-
-
+function calcGeometry(radius) {
+   
+   let circumference = Math.PI * 2*radius;
+   
+   console.log("The circumference is " + circumference);
+   
+   let area = Math.PI * radius*radius;
+   
+   console.log("The area is " + area);
+ }
 
 
 //Exercise #5
@@ -95,13 +113,23 @@ const students = [
 // - Now store a fahrenheit temperature int a variable
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
-
-
-
-
+function celsiusToFahrenheit(celsius) {
+ let celsiusInF = (celsius*9)/5 + 32;
+   console.log(celsius + '°C is ' + celsiusInF + '°F');
+ }
+ function fahrenheitToCelsius(fahrenheit) {
+   let fahrenheitInC = ((fahrenheit - 32)*5)/9;
+   console.log(fahrenheit + '°F is ' + fahrenheitInC + '°C');
+ }
 
 
 //Exercise #6
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function math(num1, num2, power) {
+  let product = Math.pow(num1 * num2, power)
+  return product
+}
+console.log(math(1, 2, 3))
