@@ -2,27 +2,32 @@
 //Write a function that loops over the following array of TKH students
 // and prints out their name and what class they are currently in.
 const students = [
-  "Angel",
-  "Ayman",
-  "David",
-  "Diana",
-  "Ezra",
-  "Jahaziel",
-  "Jennifer",
-  "Julian",
-  "Katherine",
-  "Leesel",
-  "Naeem",
-  "Nashid",
-  "Quiana",
-  "Shafee",
-  "Shan",
-  "Stephanie",
-  "Tinesha",
-  "Zipporah",
+    "Angel",
+    "Ayman",
+    "David",
+    "Diana",
+    "Ezra",
+    "Jahaziel",
+    "Jennifer",
+    "Julian",
+    "Katherine",
+    "Leesel",
+    "Naeem",
+    "Nashid",
+    "Quiana",
+    "Shafee",
+    "Shan",
+    "Stephanie",
+    "Tinesha",
+    "Zipporah",
 ];
 
-
+function namez(arr) {
+    for (let i = 0; i < students.length; i++) {
+        console.log(students[i] + " is in the Web Development Track")
+    }
+}
+namez(students)
 
 
 
@@ -37,11 +42,13 @@ const students = [
 //Add an additional argument to the function that takes the conversion
 //rate of human to dog years
 
-
-
-
-
-
+function calculateDogAge(age) {
+    let dogYears = 7 * age;
+    console.log("Your pup is " + dogYears + " years old in dog years!");
+}
+calculateDogAge(1);
+calculateDogAge(2);
+calculateDogAge(12);
 
 
 
@@ -58,9 +65,15 @@ const students = [
 // result to a round number
 
 
-
-
-
+function calculateSupply(age, numPerDay) {
+    let maxAge = 100;
+    let totalNeeded = (numPerDay * 365) * (maxAge - age);
+    let message = 'You need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
+    console.log(message);
+}
+calculateSupply(28, 36);
+calculateSupply(28, 2.5);
+calculateSupply(28, 400);
 
 
 
@@ -78,10 +91,12 @@ const students = [
 // - Pass the radius to the function
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
-
-
-
-
+function calcGeometry(radius) {
+    let circumference = Math.PI * 2 * radius;
+    console.log("The circumference is " + circumference);
+    let area = Math.PI * radius * radius;
+    console.log("The area is " + area);
+}
 
 
 
@@ -96,6 +111,16 @@ const students = [
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
 
+function celsiusToFahrenheit(celsius) {
+    let celsiusInF = (celsius * 9) / 5 + 32;
+    console.log(celsius + '°C is ' + celsiusInF + '°F');
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+    let fahrenheitInC = ((fahrenheit - 32) * 5) / 9;
+    console.log(fahrenheit + '°F is ' + fahrenheitInC + '°C');
+}
+
 
 
 
@@ -105,3 +130,10 @@ const students = [
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+
+function math(num1, num2, power) {
+    let product = Math.pow(num1 * num2, power)
+    return product
+}
+console.log(math(1, 2, 3))
