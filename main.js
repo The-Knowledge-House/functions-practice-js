@@ -49,7 +49,7 @@ TKH(students, course);
 //rate of human to dog years
 
 
-// I'm confused about this because shouldn't it take in Human years since we are trying to figure out what the dog years are? (The example is Your dog is something years old in dog years). 
+// I'm confused about this because shouldn't it take in Human years since we are trying to figure out what the dog years are? (The example is Your dog is something years old in dog years) 
 function calculateDogAge(humanYears) {
 let conversion = humanYears * 7; 
 console.log(`Your dog is ${conversion} years old in dog years`);
