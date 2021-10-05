@@ -30,7 +30,7 @@ function nameAndClass(arr1, arr2){
     console.log(`${arr1[i]} is in the ${arr2[1]} class. `)
   }
 }
-// nameAndClass(students, courses)
+nameAndClass(students, courses)
 
 
 //Exercise #2
@@ -48,7 +48,7 @@ function calculateDogAge(age){
     let dogAge = age * 7
     return "Your dog is " + dogAge + " years old in dog years."
 }
-// console.log(calculateDogAge(20))
+console.log(calculateDogAge(20))
 
 
 // Exercise #3
@@ -67,7 +67,7 @@ function calculateSupply(age, amount){
   return result
 
 }
-// console.log(calculateSupply(30, 3))
+console.log(calculateSupply(30, 3))
 
 
 
@@ -109,7 +109,7 @@ function celsiusToFahrenheit(){
   let convertToF = (celsius * (9/5) + 32)
   return `${celsius} degrees Celsius is ${convertToF} degrees Fahrenheit.`
 }
-// console.log(celsiusToFahrenheit())
+console.log(celsiusToFahrenheit())
 
 
 //Exercise #6
@@ -121,4 +121,4 @@ function myFunction(a,b,c){
   let formula = (a * b) ** c
   return formula
 }
-// console.log(myFunction(1,2,3))
+console.log(myFunction(1,2,3))
