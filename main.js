@@ -66,7 +66,7 @@ calcDogAge(9)
 // result to a round number
 
 
-
+// ** i sincerely don't understand what we're supposed to be calculating **
 
 
 
