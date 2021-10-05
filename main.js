@@ -23,7 +23,11 @@ const students = [
 ];
 
 
+function classIn(){
+  students.map((student) => console.log(student + " is in TKH"))
+}
 
+classIn();
 
 
 //Exercise #2
@@ -38,13 +42,13 @@ const students = [
 //rate of human to dog years
 
 
+function calculateDogAge(puppyAge){
+  let dogToHumanYears = puppyAge * 7;
+  return "Your dog is " + dogToHumanYears + " in dog years";
+}
 
-
-
-
-
-
-
+console.log(calculateDogAge(5));
+console.log(calculateDogAge(10));
 
 
 
@@ -59,9 +63,16 @@ const students = [
 
 
 
+function calculateSupply(age, amountPerDay){
+  let benchmarkAge = 100;
+  let total = (amountPerDay * 365) * (benchmarkAge - age);
+
+  return "You will need " + total + " until the age of " + benchmarkAge; 
+}
 
 
 
+console.log(calculateSupply(24, 50));
 
 
 
@@ -80,8 +91,19 @@ const students = [
 
 
 
+function calcCircumference(radius){
+  let circumference = 2 * Math.PI * radius;
+  return "The circumference is " + circumference;
+}
 
 
+function calcArea(radius){
+  let area = Math.PI * (radius * radius);
+  return "The area is " + area;
+}
+
+console.log(calcCircumference(2));
+console.log(calcArea(4));
 
 
 
@@ -96,12 +118,28 @@ const students = [
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
 
+function celsiusToFahrenheit(celsius){
+  let fahrenheit = (celsius * (9/5)) + 32;
+  return celsius + " degrees Celsius is " + fahrenheit + " degrees Fahrenheit";
+}
+
+function fahrenheitToCelsius(fahrenheit){
+  let celsius = (fahrenheit - 32) * (5/9);
+  return fahrenheit + " degrees Fahrenheit is " + celsius + " degrees Celsius";
+}
 
 
-
-
+console.log(celsiusToFahrenheit(20));
+console.log(fahrenheitToCelsius(90));
 
 //Exercise #6
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function productOf(num1, num2, num3){
+  let product = Math.pow((num1*num2), num3);
+  return product;
+}
+
+console.log(productOf(1,2,3));
