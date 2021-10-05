@@ -78,9 +78,10 @@ calculateDogAge(2);
 // result to a round number
 
 function calculateSupply(age, amount) { 
-  let amountConsumed = (amount * 365);
+  let benchmarkAge = 105; 
+  let amountConsumed = (amount * 365) * (benchmarkAge - age);
   let roundConsumed = parseInt(amountConsumed);
-  console.log(`You will need ${roundConsumed} to last you the age of ${age}`);
+  console.log(`You will need ${roundConsumed} amounts of food to last you the age of ${benchmarkAge}`);
 }
 
 
