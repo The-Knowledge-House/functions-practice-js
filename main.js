@@ -22,8 +22,15 @@ const students = [
   "Zipporah",
 ];
 
+const courses = ["Data", "PWD"]
 
-
+function nameAndClass(arr1, arr2){
+  for(let i = 0; i < arr1.length; i++){
+    // string interpolation (must use back ticks)
+    console.log(`${arr1[i]} is in the ${arr2[1]} class. `)
+  }
+}
+// nameAndClass(students, courses)
 
 
 //Exercise #2
@@ -37,32 +44,30 @@ const students = [
 //Add an additional argument to the function that takes the conversion
 //rate of human to dog years
 
+function calculateDogAge(age){
+    let dogAge = age * 7
+    return "Your dog is " + dogAge + " years old in dog years."
+}
+// console.log(calculateDogAge(20))
 
 
-
-
-
-
-
-
-
-
-
-//Exercise #3
-//Write a function named calculateSupply that:
+// Exercise #3
+// Write a function named calculateSupply that:
 // takes 2 arguments: age, amount per day
 // calculates the amount consumed for the rest of the life(based on a benchmark age)
-//  outputs the result to the screen like so: "You will need SOMETHING to last you until the age of X"
+// outputs the result to the screen like so: "You will need SOMETHING to last you until the age of X"
 // Call that function several times, using different values each time
+
 // Bonus: accept floating point values for amount per day, and round the
 // result to a round number
 
+function calculateSupply(age, amount){
+  let endOfLife = 50
+  let result = (endOfLife - age) * amount
+  return result
 
-
-
-
-
-
+}
+// console.log(calculateSupply(30, 3))
 
 
 
@@ -78,13 +83,17 @@ const students = [
 // - Pass the radius to the function
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
+function calcCircumference(rad){
+  let formula = 2 * Math.PI * rad
+  return `The circumference is ${formula}.`
+}
+console.log(calcCircumference(20))
 
-
-
-
-
-
-
+function calcArea(rad){
+  let formula = Math.PI * (rad ** 2)
+  return `The area is ${formula}.`
+}
+console.log(calcArea(20))
 
 
 //Exercise #5
@@ -95,13 +104,21 @@ const students = [
 // - Now store a fahrenheit temperature int a variable
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
-
-
-
-
+function celsiusToFahrenheit(){
+  let celsius = 30;
+  let convertToF = (celsius * (9/5) + 32)
+  return `${celsius} degrees Celsius is ${convertToF} degrees Fahrenheit.`
+}
+// console.log(celsiusToFahrenheit())
 
 
 //Exercise #6
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function myFunction(a,b,c){
+  let formula = (a * b) ** c
+  return formula
+}
+// console.log(myFunction(1,2,3))
