@@ -22,8 +22,16 @@ const students = [
   "Zipporah",
 ];
 
+let classList = ["PWD", "DS", "CS"];
+
+function TKHers(array1, array2) {
+	for (let i = 0; i < array1.length; i++) {
+  	console.log(`${array1[i]} is a part of the ${array2[1]} cohort.`);
+   } // endFOR
 
 
+} // EndFUNC.
+TKHers(students, classList)
 
 
 //Exercise #2
@@ -37,16 +45,16 @@ const students = [
 //Add an additional argument to the function that takes the conversion
 //rate of human to dog years
 
+// the orginal explanation wasn't concrete so i
+// coded the function as one might typically expect.
 
-
-
-
-
-
-
-
-
-
+function calcDogAge(humanYears) {
+	let dogAge = humanYears * 7;
+  console.log(`${humanYears} 'human-years' mean ${dogAge} in dog-years!`)
+} //endFUNC
+calcDogAge(4)
+calcDogAge(6)
+calcDogAge(9)
 
 //Exercise #3
 //Write a function named calculateSupply that:
@@ -78,14 +86,18 @@ const students = [
 // - Pass the radius to the function
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
+const pi = 3.141
+function calcCircum (radiusVal) {
+	let cumfrence = (2 * pi) * radiusVal;
+  console.log(`The circumference is ${cumfrence}`)
+} // endFUNC
+calcCircum(6)
 
-
-
-
-
-
-
-
+function calcArea (radiusVal) {
+	let area = pi * (radiusVal * radiusVal);
+  console.log(`The area is ${area}`)
+} // endFUNC
+calcArea(6)
 
 //Exercise #5
 //Create a function called celsiusToFahrenheit:
@@ -95,13 +107,32 @@ const students = [
 // - Now store a fahrenheit temperature int a variable
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
+function cTof(celsiNum) {
+	let cTransF = (celsiNum * 1.8) + 32;
+  console.log(`${celsiNum} degrees Celsius is ${cTransF} degress Fahrenheit!`)
+} // endFUNC
+cTof(21)
 
+function FToC(FahrenNum) {
+	let FToC = (FahrenNum - 32) * 0.556;
+  console.log(`${FahrenNum} degrees Fahrenheit is ${FToC} degress Celsius!`)
+} // endFUNC
+FToC(157)
 
-
-
-
+/*
+function cTof(celsiNum) {
+  console.log(`${celsiNum} degrees Celsius is ${((celsiNum * 1.8) + 32)} degress Fahrenheit!`) // if one-line is preferable
+} // endFUNC
+cTof(21)
+*/
 
 //Exercise #6
 //Write a function that takes 3 parameters and returns one number, which is
-//the product of the first two numbers raised to the power of the third
-//passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+//the product of the first two numbers raised to the power of the third.
+//Passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function doMaths(num1, num2, num3) {
+	let product = (Math.pow((num1*num2), num3))
+  return product
+} // endFUNC
+console.log(doMaths(2,3,2));
