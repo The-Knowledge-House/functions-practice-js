@@ -22,8 +22,15 @@ const students = [
   "Zipporah",
 ];
 
+const courses = ["Data", "PWD"]
 
+function TKH(arr1, arr2) {
+  for (let i = 0; i < arr1.length; i++) {
+    console.log(`${arr1[i]} is in the ${arr2[1]} class.`)
+  }
+}
 
+TKH(students, courses);
 
 
 //Exercise #2
@@ -38,13 +45,15 @@ const students = [
 //rate of human to dog years
 
 
-
-
-
-
-
-
-
+function calculateDogAge(humanAge, dogAge) {
+  let human = dogAge * 7;
+  let dog = humanAge * 7;
+  console.log("Your dog is " + dog + " years old in dog years");
+  console.log("Your age in dog years is " + human);
+}
+calculateDogAge(21, 40);
+calculateDogAge(3, 1);
+calculateDogAge(18, .5);
 
 
 
@@ -58,11 +67,15 @@ const students = [
 // result to a round number
 
 
-
-
-
-
-
+function calculateSupply(age, amountPerDay) {
+  let maxAge = 105;
+  let total = Math.round((maxAge - age) * (365 * amountPerDay));
+  console.log("You will need " + total + " icecream cheesecakes to last you until the age of " + maxAge);
+}
+calculateSupply(50, 30);
+calculateSupply(21, 10.5);
+calculateSupply(15.5, 4.3);
+calculateSupply(11.9, 9.1);
 
 
 
@@ -79,11 +92,15 @@ const students = [
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
 
-
-
-
-
-
+let radius = 10;
+function calcCircumference(radius) {
+  console.log(`The circumference is ${radius * 2 * Math.PI}`);
+}
+function calcArea(radius) {
+  console.log(`The Area is ${Math.PI * radius * radius}`)
+}
+calcCircumference(radius)
+calcArea(radius)
 
 
 
@@ -96,12 +113,26 @@ const students = [
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
 
+function celsiusToFahrenheit(celsius) {
+  return `${celsius} degrees Celsius is ${(celsius * 1.8) + 32} degrees Fahrenheit`
+}
 
+console.log(celsiusToFahrenheit(20));
 
+function fahrenheitToCelsius(fahrenheit) {
+  return `${fahrenheit} degrees Fahrenheit is ${(fahrenheit - 32) * 5 / 9} degrees Celsius`
+}
 
+console.log(fahrenheitToCelsius(100))
 
 
 //Exercise #6
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function parameters(num1, num2, num3) {
+  return Math.pow((num1 * num2), num3)
+}
+
+console.log(parameters(2, 2, 3))
