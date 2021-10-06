@@ -22,8 +22,10 @@ const students = [
   "Zipporah",
 ];
 
-
-
+function classmates(arr){
+  students.map((arr) => console.log(`${arr} is currrently in PWD`))
+}
+classmates();
 
 
 //Exercise #2
@@ -38,9 +40,14 @@ const students = [
 //rate of human to dog years
 
 
+function calculateDogAge(age){
+  let dogYears = age*7;
+  console.log(`Your dog is ${dogYears} years old in dog years!`)
+}
 
-
-
+calculateDogAge(5);
+calculateDogAge(1);
+calculateDogAge(13);
 
 
 
@@ -57,6 +64,13 @@ const students = [
 // Bonus: accept floating point values for amount per day, and round the
 // result to a round number
 
+function calculateSupply(age,amount){
+  let benchmark = 75;
+  let total = (amount * 365) * (benchmark - age);
+  console.log(`You will need ${total} ?meals to last you until the age of ${benchmark}`)
+}
+
+calculateSupply(27,3)
 
 
 
@@ -79,6 +93,20 @@ const students = [
 // - Calculate the area based on the radius and output "The area is SOMETHING"
 
 
+function calcCircumfrence(radius){
+let math = Math.PI * 2 * radius;
+console.log(`The circumfrence is ${math}`)
+}
+
+function calcArea(radius){
+let area = Math.PI * (radius * radius);
+console.log(`The area is ${area}`)
+
+}
+
+calcCircumfrence(5);
+calcArea(3);
+
 
 
 
@@ -96,7 +124,18 @@ const students = [
 // - Convert it to celsius and output "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
 
+function celsiusToFahrenheit(cel){
+  let fahrenheit = (cel * (9/5) * 32);
+  return `${cel} degrees celsius is ${fahrenheit} degrees fahrenheit`
 
+}
+function fahrenheitToCelsius(fahr){
+  let celsius = (fahr - 32) * (5/9);
+  return `${fahr} degrees fahrenheit is ${celsius} degrees celsius`
+}
+
+console.log(celsiusToFahrenheit(2));
+console.log(fahrenheitToCelsius(59));
 
 
 
@@ -105,3 +144,10 @@ const students = [
 //Write a function that takes 3 parameters and returns one number, which is
 //the product of the first two numbers raised to the power of the third
 //passing this function 1,2,3 should give you back the answer to (1 * 2)^3
+
+function products( a, b , c){
+  let product = Math.pow((a*b), c)
+  return product;
+}
+
+console.log(products(1,2,3));
